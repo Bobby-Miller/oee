@@ -23,6 +23,8 @@
 
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/oee.css' %}">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
@@ -32,10 +34,23 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">Zircoa OEE</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Shift Logging</a></li>
+                    <li><a href="/">80/20</a></li>
+                    <li><a href="/">OEE Trends</a></li>
+                </ul>
+            </div>
+        </nav>
+
         {% block content %}{% endblock %}
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/oee.js' %}"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}

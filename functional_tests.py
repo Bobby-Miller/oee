@@ -11,7 +11,7 @@ class NewVisitorTest(unittest.TestCase):
 
     def test_can_get_homepage(self):
             self.browser.get("http://localhost:8001")
-            self.assertIn('Homepage', self.browser.title)
+            self.assertIn('OEE', self.browser.title)
             self.fail('Finish the test!')
 
 if __name__ == '__main__':
