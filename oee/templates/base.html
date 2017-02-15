@@ -29,9 +29,15 @@
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        
+
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
+        <div class="container">
         {% wagtailuserbar %}
 
         <nav>
@@ -46,7 +52,7 @@
         </nav>
 
         {% block content %}{% endblock %}
-
+        </div>
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/oee.js' %}"></script>
         <!-- Compiled and minified JavaScript -->
