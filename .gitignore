@@ -1,3 +1,4 @@
 dev.py
 *.pyc
 geckodriver.log
+/.idea
