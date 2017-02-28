@@ -2,3 +2,16 @@ dev.py
 *.pyc
 geckodriver.log
 /.idea
+.idea/encodings.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/oee.iml
+.idea/workspace.xml
+fab/__pycache__/
+fab/migrations/__pycache__/
+home/__pycache__/
+home/migrations/__pycache__/
+oee/__pycache__/
+oee/settings/__pycache__/
+search/__pycache__/

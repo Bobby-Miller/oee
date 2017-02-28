@@ -1,11 +1,21 @@
 {% extends "base.html" %}
 
+
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
     <div class="row">
+
+    <div class="col s12 m2">
+    {% load material_form %}
+    <form action="/" method="post">
+        {% csrf_token %}
+        {% form form=form %}{% endform %}
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    </div>
     {% for wc in wc_detail %}
-        <div class="col s12 m6">
+        <div class="col s12 m5">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title">{{ wc.workcenter }} - {{ wc.description }}</span>
@@ -16,7 +26,6 @@
 
 
                   function drawVisualization() {
-                    // Some raw data (not necessarily accurate)
                     var data = google.visualization.arrayToDataTable([
                      ['Month', 'Percent'],
                      ['Performance',  80],
@@ -43,7 +52,7 @@
                     }
             </script>
 
-              <div id="{{ wc.workcenter }}" style="width: 550px; height: 280px;"></div>
+              <div id="{{ wc.workcenter }}" style="width: 400px; height: 230px;"></div>
             </div>
             <div class="card-action">
               <a href="#">80/20 Data</a>
@@ -53,4 +62,5 @@
         </div>
     {% endfor %}
     </div>
+
 {% endblock %}
